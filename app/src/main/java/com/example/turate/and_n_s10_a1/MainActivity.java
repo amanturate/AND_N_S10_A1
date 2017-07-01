@@ -3,9 +3,6 @@ package com.example.turate.and_n_s10_a1;
 import android.app.Activity;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,7 +19,7 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.simple_addition);
-
+        //finding fragment
         getFragmentManager().findFragmentById(R.id.FrameLayout1);
 
     }
@@ -31,6 +28,7 @@ public class MainActivity extends FragmentActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
+            //inflating the fragment
             View v = inflater.inflate(R.layout.activity_main, container, false);
 
             Button b = (Button) v.findViewById(R.id.button1);
